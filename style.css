@@ -1,0 +1,219 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background: url('images/background-header..jpg');
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c81486; /* Logo Color */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.navbar-nav .nav-link:hover{
+    background-color: #c81486;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: url('images/background-header..jpg');
+    height: 100vh;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.hero h1, .hero h3, .hero p {
+    margin: 0;
+}
+
+.hero h3 {
+    font-size: 18px;
+    color: #c81486;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.hero .cta-buttons .btn {
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.hero .btn-success:hover {
+    background-color: #218838; /* O nuanță mai închisă de verde */
+}
+
+
+.hero .btn-outline-light {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+/* Adjust Image */
+/* Ajustări pentru imaginea de profil din Hero Section */
+.hero img {
+    width: 400px; /* Lățimea imaginii mărită */
+    height: 400px; /* Înălțimea imaginii mărită pentru a fi perfect rotundă */
+    border-radius: 50%; /* Colțuri rotunde complete */
+    object-fit: cover; /* Imaginea se redimensionează păstrând proporțiile */
+    position: relative;
+    opacity: 0; /* Invizibil inițial */
+    transform: translateX(-50px); /* Deplasat inițial la stânga */
+    right: -50px; /* Mută imaginea mai spre dreapta */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.hero img.show {
+    opacity: 1; /* Devine vizibil */
+    transform: translateX(0); /* Revine la poziția inițială */
+}
+
+h2{
+    color:#c81486;
+}
+
+/* Animație pentru fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Ușoară deplasare în jos la început */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Revine la poziția inițială */
+    }
+}
+
+/* Efect general de fade-in */
+.fade-in {
+    opacity: 0; /* Ascunde elementul inițial */
+    animation: fadeIn 1s ease-out forwards; /* Animația durează 1s și se oprește la sfârșit */
+}
+
+/* Efect de întârziere pentru a crea o succesiune plăcută */
+.fade-in.navbar, .fade-in.navbar .nav-link, .fade-in.hero h1, .fade-in.hero h3, .fade-in.hero p {
+    animation-delay: 0.5s; /* Întârziere de 0.5s pentru a apărea mai plăcut */
+}
+
+
+/* Stilizare pentru iconițele sociale din secțiunea "Contact Me" */
+.social-icons a {
+    text-decoration: none; /* Elimină sublinierea link-urilor */
+    color: #ffffff; /* Culoare albă implicită */
+    transition: transform 0.3s ease, color 0.3s ease; /* Tranziție pentru transform și culoare */
+    display: inline-block; /* Asigură o zonă de hover clară */
+    margin: 0 15px; /* Spațiu între iconițe */
+}
+
+/* Efect la hover pentru iconițe */
+.social-icons a:hover {
+    transform: scale(2); /* Mărește iconița cu 20% */
+    fill: #c81486; /* Schimbă culoarea la hover */
+}
+
+/* Stil suplimentar pentru iconițe (opțional) */
+.social-icons a i {
+    font-size: 30px; /* Dimensiunea de bază a iconițelor */
+}
+
+.list-group{
+ margin-top: 40px;
+}
+/* General Fade-In Style */
+.fade-in-section {
+    opacity: 0; /* Inițial, elementele sunt invizibile */
+    transform: translateY(50px); /* Ușor deplasate în jos */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Clasa care activează efectul de fade-in */
+.fade-in-section.show {
+    opacity: 1; /* Devine vizibil */
+    transform: translateY(0); /* Își revine la poziția inițială */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    flex-grow: 1; /* Ensures that the text area expands to fill available space */
+}
+
+.btn {
+    margin-top: auto; /* Moves the button to the bottom of the card */
+}
+
+.btn-primary{
+    background-color: #c81486;
+}
+
+.btn-primary:hover{
+    background-color: #9f116b;
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #000; /* Fundal negru */
+    border-top: 1px solid #333; /* Linie de delimitare deasupra */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer .nav-link {
+    margin: 0 15px;
+    font-size: 14px;
+    color: #ffffff; 
+    transition: color 0.3s ease-in-out;
+}
+
+.footer .nav-link:hover {
+    color: #c81486; 
+}
+
+/* Fade-in Animation Style */
+.fade-in-section {
+    opacity: 0; /* Invizibil inițial */
+    transform: translateY(30px); /* Ușor deplasate în jos */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Active Animation */
+.fade-in-section.show {
+    opacity: 1; /* Devine vizibil */
+    transform: translateY(0); /* Își revine la poziția inițială */
+}
+
+/* Stil pentru imagini */
+#about-me img {
+    display: block; /* Se afișează pe întreaga linie */
+    margin: 0 auto; /* Centrează imaginea */
+    max-width: 80%; /* Setează dimensiunea maximă pentru imagini */
+    height: auto; /* Menține proporțiile */
+}
