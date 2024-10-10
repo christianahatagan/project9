@@ -217,3 +217,64 @@ h2{
     max-width: 80%; /* Setează dimensiunea maximă pentru imagini */
     height: auto; /* Menține proporțiile */
 }
+
+@media only screen and (max-width: 320px) {
+    /* Ajustarea secțiunii hero */
+    .hero {
+        padding: 20px; /* Padding suplimentar pentru a preveni aglomerarea */
+        text-align: center; /* Centrează textul */
+        display: flex; /* Activează flexbox */
+        flex-direction: column; /* Elemente aranjate vertical */
+        align-items: center; /* Centrează pe orizontală */
+        justify-content: center; /* Centrează pe verticală */
+    }
+
+    /* Ajustăm layout-ul rândurilor și coloanelor pentru a putea reordona elementele */
+    .hero .row {
+        display: flex; /* Folosește flexbox pentru a aranja elementele */
+        flex-direction: column; /* Aranjează toate elementele vertical */
+    }
+
+    .hero .col-lg-6 {
+        display: block !important; /* Elimină constrângerile Bootstrap */
+        width: 100%; /* Asigură-te că fiecare coloană ocupă 100% */
+        margin-bottom: 20px; /* Adaugă spațiu între elemente */
+    }
+
+    /* Imaginea din secțiunea hero */
+    .hero img {
+        order: -1; /* Face imaginea primul element */
+        width: 150px; /* Redimensionează imaginea */
+        height: 150px; /* Păstrează imaginea rotundă */
+        margin-bottom: 20px; /* Adaugă spațiu sub imagine */
+        border-radius: 50%; /* Asigură-te că imaginea este rotundă */
+        object-fit: cover; /* Păstrează proporțiile imaginii */
+        opacity: 1 !important; /* Asigură-te că imaginea este vizibilă */
+        visibility: visible !important; /* Asigură-te că imaginea este vizibilă */
+        position: static; /* Elimină orice poziționare anterioară */
+    }
+
+    /* Text și titluri din secțiunea hero */
+    .hero h3 {
+        font-size: 16px; /* Diminuează subtitlul */
+        margin-top: 10px; /* Adaugă spațiu între imagine și text */
+    }
+
+    .hero h1 {
+        font-size: 24px; /* Diminuează dimensiunea titlului */
+        line-height: 1.4; /* Ajustează spațiul între rânduri */
+    }
+
+    .hero p {
+        font-size: 14px; /* Dimensiune mai mică pentru paragrafe */
+        padding: 0 10px; /* Padding pentru a nu aglomera textul */
+    }
+
+    /* Butoane din secțiunea hero */
+    .hero .cta-buttons .btn {
+        width: 100%; /* Butoanele ocupă lățimea completă */
+        font-size: 12px; /* Dimensiunea fontului mai mică pentru butoane */
+        padding: 10px 15px; /* Padding redus pentru a se potrivi ecranului */
+        margin-bottom: 10px; /* Spațiere între butoane */
+    }
+}
