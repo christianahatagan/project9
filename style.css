@@ -221,7 +221,7 @@ h2{
 @media only screen and (max-width: 320px) {
     /* Ajustarea secțiunii hero */
     .hero {
-        padding: 20px; /* Padding suplimentar pentru a preveni aglomerarea */
+        padding: 0px; /* Padding suplimentar pentru a preveni aglomerarea */
         text-align: center; /* Centrează textul */
         display: flex; /* Activează flexbox */
         flex-direction: column; /* Elemente aranjate vertical */
@@ -256,18 +256,26 @@ h2{
 
     /* Text și titluri din secțiunea hero */
     .hero h3 {
-        font-size: 16px; /* Diminuează subtitlul */
-        margin-top: 10px; /* Adaugă spațiu între imagine și text */
+        font-size: 14px; /* Diminuează subtitlul */
+        margin-top: 30px; /* Adaugă spațiu între imagine și text */
     }
 
     .hero h1 {
-        font-size: 24px; /* Diminuează dimensiunea titlului */
-        line-height: 1.4; /* Ajustează spațiul între rânduri */
+        font-size: 19px; /* Diminuează dimensiunea titlului */
+        margin-top: 10px; /* Add some spacing at the top */
     }
 
     .hero p {
         font-size: 14px; /* Dimensiune mai mică pentru paragrafe */
         padding: 0 10px; /* Padding pentru a nu aglomera textul */
+    }
+
+    .hero .col-lg-6 {
+        padding: 0 10px; /* Add some padding to prevent text from being too close to the edge */
+    }
+
+    .hero .col-lg-6 {
+        padding: 0 10px; /* Add some padding to prevent text from being too close to the edge */
     }
 
     /* Butoane din secțiunea hero */
